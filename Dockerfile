@@ -11,7 +11,7 @@ RUN apt-get update && \
     cd rocksdb-${ROCKSDB_VERSION} && \
     make shared_lib && \
     make install-shared INSTALL_PATH=/usr && \
-    rm -rf rocksdb-${ROCKSDB_VERSION} && \
+    rm -rf tmp/rocksdb* && \
     apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
